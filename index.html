@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>Clee Translate Pdf | Hexa dev</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Space+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="floating-strip">
+        <div class="strip-scroll">
+            <span>◆ Clee Translate Pdf ◆ FREE PDF TRANSLATOR ◆ 100+ LANGUAGES ◆ 50MB SUPPORT ◆ REAL-TIME PROCESSING ◆</span>
+            <span>◆ Clee Translate Pdf ◆ FREE PDF TRANSLATOR ◆ 100+ LANGUAGES ◆ 50MB SUPPORT ◆ REAL-TIME PROCESSING ◆</span>
+        </div>
+    </div>
+
+    <div class="app-wrapper">
+        <aside class="side-panel">
+            <div class="panel-brand">
+                <div class="brand-marks">
+                    <div class="mark mark-a"></div>
+                    <div class="mark mark-b"></div>
+                    <div class="mark mark-c"></div>
+                </div>
+                <div class="brand-title">
+                    <span class="title-line">Clee</span>
+                    <span class="title-line accent">Pdf</span>
+                </div>
+                <div class="brand-badge">v1.0</div>
+            </div>
+            <div class="panel-stats">
+                <div class="stat-item">
+                    <span class="stat-value">50MB</span>
+                    <span class="stat-label">MAX SIZE</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">100+</span>
+                    <span class="stat-label">LANGUAGES</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">FREE</span>
+                    <span class="stat-label">FOREVER</span>
+                </div>
+            </div>
+            <div class="panel-links">
+                <a href="https://whatsapp.com/channel/0029VbCU7F54Y9lwk7lwUh2e" target="_blank" class="side-link wa">
+                    <i class="ri-whatsapp-line"></i> CHANNEL
+                </a>
+                <a href="https://github.com/hey-pro-108" target="_blank" class="side-link gh">
+                    <i class="ri-github-line"></i> REPO
+                </a>
+                <a href="https://saweria.co/hexaaaadev" target="_blank" class="side-link saweria">
+                    <i class="ri-cup-line"></i> SUPPORT
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="content-header">
+                <h1>PDF TRANSLATOR</h1>
+                <p>terjemahkan dokumen ke berbagai bahasa dunia</p>
+            </div>
+
+            <div class="translator-grid">
+                <div class="upload-section">
+                    <div class="upload-zone" id="dropzone">
+                        <div class="upload-icon">
+                            <i class="ri-file-pdf-fill"></i>
+                        </div>
+                        <input type="file" id="pdfInput" accept=".pdf" hidden>
+                        <div class="upload-text">
+                            <span id="uploadLabel">DROP PDF HERE</span>
+                            <span class="upload-hint">or click to browse</span>
+                        </div>
+                        <div class="upload-limit">max 50 MB</div>
+                        <div id="fileInfo" class="file-info" style="display: none;"></div>
+                    </div>
+                </div>
+
+                <div class="controls-section">
+                    <div class="control-row row-2col">
+                        <div class="control-group">
+                            <label><i class="ri-translate-2"></i> FROM</label>
+                            <div class="select-wrap">
+                                <select id="sourceLang">
+                                    <option value="auto">AUTO DETECT</option>
+                                    <option value="id">INDONESIA</option>
+                                    <option value="en">ENGLISH</option>
+                                    <option value="ar">ARABIC</option>
+                                    <option value="zh-CN">CHINESE</option>
+                                    <option value="ja">JAPANESE</option>
+                                    <option value="ko">KOREAN</option>
+                                    <option value="fr">FRENCH</option>
+                                    <option value="de">GERMAN</option>
+                                    <option value="es">SPANISH</option>
+                                    <option value="it">ITALIAN</option>
+                                    <option value="pt">PORTUGUESE</option>
+                                    <option value="ru">RUSSIAN</option>
+                                    <option value="hi">HINDI</option>
+                                    <option value="th">THAI</option>
+                                    <option value="vi">VIETNAMESE</option>
+                                    <option value="ms">MALAY</option>
+                                    <option value="nl">DUTCH</option>
+                                    <option value="tr">TURKISH</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label><i class="ri-global-line"></i> TO</label>
+                            <div class="select-wrap">
+                                <select id="targetLang">
+                                    <option value="id">INDONESIA</option>
+                                    <option value="en">ENGLISH</option>
+                                    <option value="ar">ARABIC</option>
+                                    <option value="zh-CN">CHINESE</option>
+                                    <option value="ja">JAPANESE</option>
+                                    <option value="ko">KOREAN</option>
+                                    <option value="fr">FRENCH</option>
+                                    <option value="de">GERMAN</option>
+                                    <option value="es">SPANISH</option>
+                                    <option value="it">ITALIAN</option>
+                                    <option value="pt">PORTUGUESE</option>
+                                    <option value="ru">RUSSIAN</option>
+                                    <option value="hi">HINDI</option>
+                                    <option value="th">THAI</option>
+                                    <option value="vi">VIETNAMESE</option>
+                                    <option value="ms">MALAY</option>
+                                    <option value="nl">DUTCH</option>
+                                    <option value="tr">TURKISH</option>
+                                </select>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-row row-2col">
+                        <div class="control-group">
+                            <label><i class="ri-skip-forward-fill"></i> START</label>
+                            <div class="number-wrap">
+                                <input type="number" id="startPage" value="1" min="1">
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label><i class="ri-skip-back-fill"></i> END</label>
+                            <div class="number-wrap">
+                                <input type="number" id="endPage" value="9999" min="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-row output-toggle">
+                        <label><i class="ri-file-copy-line"></i> MODE</label>
+                        <div class="toggle-group">
+                            <button type="button" data-mode="text" class="toggle-btn active">TEXT ONLY</button>
+                            <button type="button" data-mode="pdf" class="toggle-btn">PDF TEXT</button>
+                        </div>
+                    </div>
+                    
+                    <div class="info-note" id="modeNote">
+                        <i class="ri-information-line"></i> Text Only: ekstrak dan terjemahkan teks saja
+                    </div>
+
+                    <button id="translateBtn" class="action-btn">
+                        <span id="btnLabel">TRANSLATE NOW</span>
+                        <i class="ri-arrow-right-up-line"></i>
+                        <div class="btn-spinner" id="spinner"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultPanel" class="result-panel" style="display: none;">
+                <div class="result-header">
+                    <div class="result-badge">RESULT</div>
+                    <div class="result-title" id="resultTitle">translated_output</div>
+                </div>
+                <div class="result-body">
+                    <div id="textOutput" class="text-output" style="display: none;"></div>
+                    <div id="pdfPreview" class="pdf-preview" style="display: none;">
+                        <div class="pdf-preview-container" id="pdfPreviewContainer"></div>
+                    </div>
+                </div>
+                <div class="result-actions">
+                    <button id="downloadResult" class="result-btn primary">DOWNLOAD TXT</button>
+                    <button id="copyResult" class="result-btn secondary">COPY TEXT</button>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-row">
+                    <span class="info-icon"><i class="ri-information-line"></i></span>
+                    <span class="info-text">support PDF files up to 50MB · extract text from all pages · google translate engine</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-icon"><i class="ri-alert-line"></i></span>
+                    <span class="info-text">PDF TEXT mode menghasilkan file teks berformat PDF (tanpa gambar/layout asli)
+                    <br>
+                    <br>
+                    *btw support untuk donet ke saweria biar tambah semangat</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
